@@ -23,7 +23,7 @@ public class ConverterController {
 		this.converterAppService = ConverterAppService;
 	}
 	
-	@GetMapping("pararomano/{numeroDecimal}")
+	@GetMapping("romano/{numeroDecimal}")
 	public ResponseEntity get(@PathVariable Integer numeroDecimal) throws Exception {
 		try {
 			return new ResponseEntity<>(converterAppService.converteParaRomano(numeroDecimal), HttpStatus.OK);			
@@ -32,7 +32,7 @@ public class ConverterController {
 		}
 	}
 	
-	@GetMapping("paradecimal/{numeroRomano}")
+	@GetMapping("decimal/{numeroRomano}")
 	public ResponseEntity get(@PathVariable String numeroRomano) {
 		try {
 			return new ResponseEntity<>(converterAppService.converteParaDecimal(numeroRomano.toUpperCase()), HttpStatus.OK);
