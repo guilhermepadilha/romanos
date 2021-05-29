@@ -1,6 +1,8 @@
 package ConverteServiceTest;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.Reader;
 import java.nio.file.Files;
@@ -58,6 +60,30 @@ public class ConverterServiceTest {
 	    	NumeroDecimalDto numeroDecimalDto = service.converteParaDecimal(valores[1]);
 	 		assertEquals(numeroDecimalDto.getNumero().intValue(), Integer.parseInt(valores[0]));
 	     }
+	}
+	
+	@Test
+	public void quando_eh_informado_decimal_invalido() {
+	    Exception exception = assertThrows(RuntimeException.class, () -> {
+	    	service.converteParaRomano(0);
+	    });
+
+	    String expectedMessage = "Valor inválido para conversão";
+	    String actualMessage = exception.getMessage();
+
+	    assertTrue(actualMessage.contains(expectedMessage));
+	}
+	
+	@Test
+	public void quando_eh_informado_numeroRomano_invalido() {
+	    Exception exception = assertThrows(RuntimeException.class, () -> {
+	    	service.converteParaDecimal("XXU");
+	    });
+
+	    String expectedMessage = "Número Romano inválido. Permitido somente algarismos [ M, D, C, L, X, V, I ]";
+	    String actualMessage = exception.getMessage();
+
+	    assertTrue(actualMessage.contains(expectedMessage));
 	}
 
 }
