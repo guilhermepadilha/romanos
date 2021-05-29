@@ -7,7 +7,7 @@ Esse projeto foi desenvolvido com a finalidade de realizar um desafio técnico p
 A solução foi desenvolvida no padrão **REST** com o **Java Spring Boot v2.3.4** e a ferramenta utilizada para o gerenciamento dos projetos foi o **Maven**.
 
 ## Estrutura do projeto
-A estrutura do projeto segue o modelo de **MicroServices** pelo motivo de promover a possiblidade de aumento do escopo do projeto futuramente.
+A estrutura do projeto segue o modelo de **MicroServices**.
 
 Foram criados dois **end-points** para atender a necessidade do desafio:
 
