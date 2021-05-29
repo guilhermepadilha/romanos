@@ -1,7 +1,5 @@
 package br.com.guilherme.romano.domain.exception;
 
-import br.com.guilherme.romano.domain.model.AlgarismosRomanos;
-
 public class InvalidValuesRomanException extends RuntimeException {
 
 	/**

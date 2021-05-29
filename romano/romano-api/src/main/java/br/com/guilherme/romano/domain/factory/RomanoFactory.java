@@ -1,8 +1,4 @@
 package br.com.guilherme.romano.domain.factory;
-
-
-
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -102,6 +98,6 @@ public class RomanoFactory {
 
 	private Integer geraOrdem(Integer numeroDecimal) {
 		String numero = Long.toString(numeroDecimal);
-		return Integer.parseInt((numero.length() >= 4) ? numero.substring(0,numero.length() -3) : numero.substring(0,1));		
+		return Integer.parseInt(numero.length() >= 4 ? numero.substring(0,numero.length() -3) : numero.substring(0,1));		
 	} 
 }

@@ -1,6 +1,5 @@
 package br.com.guilherme.romano.api.controller;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.guilherme.romano.domain.application.IConverterAppService;
-import br.com.guilherme.romano.domain.service.dto.NumeroDecimalDto;
-import br.com.guilherme.romano.domain.service.dto.NumeroRomanoDto;
 
 @RestController
 @CrossOrigin

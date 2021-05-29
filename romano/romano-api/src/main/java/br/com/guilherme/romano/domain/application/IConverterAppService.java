@@ -1,6 +1,5 @@
 package br.com.guilherme.romano.domain.application;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import br.com.guilherme.romano.domain.service.dto.NumeroDecimalDto;

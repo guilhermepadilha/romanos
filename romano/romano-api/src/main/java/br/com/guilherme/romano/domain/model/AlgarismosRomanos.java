@@ -11,7 +11,7 @@ public enum AlgarismosRomanos {
 	I(1);
 	
 	public Integer valorAlgarismo;
-	private AlgarismosRomanos(Integer valor) {
+	AlgarismosRomanos(Integer valor) {
 		this.valorAlgarismo = valor;
 	}
 	

@@ -12,21 +12,7 @@
 	<artifactId>romano</artifactId>
 	<packaging>pom</packaging>
 
-	<modules>
-		<module>romano-web</module>
+	<modules>		
 		<module>romano-api</module>
 	</modules>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
 </project>
